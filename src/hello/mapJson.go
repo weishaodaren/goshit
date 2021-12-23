@@ -16,6 +16,11 @@ func main() {
 	}
 	fmt.Println("map data:", res)
 
+	delete(res, "code")
+	fmt.Println("------------")
+	fmt.Println(res)
+	fmt.Println("==============")
+
 	jsons, errs := json.Marshal(res)
 	if errs != nil {
 		fmt.Println("json marshal err:", errs)
