@@ -11,4 +11,16 @@ func main() {
 	for k, v := range person{
 		fmt.Printf("person[%d]: %s\n", k, v)
 	}
+
+	for i := range person{
+		fmt.Printf("person[%d]: %s\n", i, person)
+	}
+
+	for i := 0; i < len(person); i++ {
+		fmt.Printf("person[%d]: %s\n", i, person[i])
+	}
+
+	for _, name := range person {
+		fmt.Println("name:", name)
+	}
 }
