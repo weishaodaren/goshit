@@ -32,12 +32,16 @@ func createSign(params map[string]interface{}) string {
 	for k := range params {
 		key = append(key, k)
 	}
+	fmt.Println("默认的key:", key)
 	sort.Strings(key)
+	fmt.Println("排序后的key:",key)
 	for i := 0; i < len(key); i++ {
 		if i == 0 {
 			str = fmt.Sprintf("%v=%v", key[i], params[key[i]])
+			fmt.Println(str)
 		} else {
 			str = str + fmt.Sprintf("&xl_%v=%v", key[i], params[key[i]])
+			fmt.Println("!=0",str)
 		}
 	}
 	// 自定义密钥
