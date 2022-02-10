@@ -12,6 +12,13 @@ const (
 	Male    = 2
 )
 
+const (
+	a = iota
+	b = iota
+	d = iota
+)
+
 func main() {
 	fm.Println(beef, two, c, Monday, Tuesday, Wednesday, Unknown, Female, Male)
+	fm.Println(a, b, d)
 }
