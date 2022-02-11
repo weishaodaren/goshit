@@ -33,4 +33,9 @@ func main() {
 	// strings.ToUpper(str) string
 	fmt.Printf("The lowercase string is : %s \n", strings.ToLower(str))
 	fmt.Printf("The uppercase string is : %s \n", strings.ToUpper(str))
+
+	// strings.TrimSpace(str) string
+	// strings.TrimSpace(str, s string) string
+	// strings.trimLeft(str) string
+	// strings.trimRight(str) string
 }
