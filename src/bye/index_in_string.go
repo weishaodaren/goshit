@@ -21,5 +21,8 @@ func main() {
 	fmt.Printf("最后出现的位置 %d\n", strings.LastIndex(str, "Hi"))
 
 	// strings.Replace(str, old, new string, n int) string
-	fmt.Printf("Replace %s", strings.Replace(str, "Marc", "weishaodaren", 1))
+	fmt.Printf("Replace %s \n", strings.Replace(str, "Marc", "weishaodaren", 1))
+
+	// strings.Count(str, s string) int
+	fmt.Printf("这个出现了多少次啊：%d \n", strings.Count(str, "Hi"))
 }
