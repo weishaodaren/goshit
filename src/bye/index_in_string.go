@@ -25,4 +25,7 @@ func main() {
 
 	// strings.Count(str, s string) int
 	fmt.Printf("这个出现了多少次啊：%d \n", strings.Count(str, "Hi"))
+
+	// strings.Repeat(str, count int) string
+	fmt.Printf("The new repeated string is : %s \n", strings.Repeat(str, 100))
 }
