@@ -28,4 +28,9 @@ func main() {
 
 	// strings.Repeat(str, count int) string
 	fmt.Printf("The new repeated string is : %s \n", strings.Repeat(str, 100))
+
+	// strings.ToLower(str) string
+	// strings.ToUpper(str) string
+	fmt.Printf("The lowercase string is : %s \n", strings.ToLower(str))
+	fmt.Printf("The uppercase string is : %s \n", strings.ToUpper(str))
 }
