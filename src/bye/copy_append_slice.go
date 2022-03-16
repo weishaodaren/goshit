@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	slFrom := []int{1, 2, 3}
 	slTo := make([]int, 10)
 
@@ -14,4 +14,3 @@ func main()  {
 	sl3 = append(sl3, 4, 5, 6)
 	fmt.Println(sl3)
 }
-
