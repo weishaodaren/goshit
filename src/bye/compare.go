@@ -1,0 +1,1 @@
+func Compare(a, b[]byte)
