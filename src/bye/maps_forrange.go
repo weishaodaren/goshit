@@ -12,4 +12,9 @@ func main() {
 	for key, value := range map1 {
 		fmt.Printf("key is: %d - value is : %f\n", key, value)
 	}
+
+	capitals := map[string]string{"France": "Paris", "Italy": "Rome", "Japan": "Tokyo"}
+	for key := range capitals {
+		fmt.Println("Map item: Capital of", key, "is", capitals[key])
+	}
 }
