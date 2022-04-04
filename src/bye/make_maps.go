@@ -7,6 +7,7 @@ func main() {
 	var mapAssigned map[string]int
 
 	mapLit = map[string]int{"one": 1, "two": 2}
+	// 永远使用`make`构造map
 	mapCreated := make(map[string]float32)
 	mapAssigned = mapLit
 
