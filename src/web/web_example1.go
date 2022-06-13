@@ -7,6 +7,19 @@ import (
 	"strings"
 )
 
+type MyMux struct {
+}
+
+func (p *MyMux) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path == "/" {
+		sayHelloName(w, r)
+		return
+	}
+
+	http.NotFound(w, r)
+	return
+}
+
 func sayHelloName(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm() //解析参数，默认是不会解析的
 	fmt.Println(r.Form)
@@ -19,12 +32,12 @@ func sayHelloName(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("key:", k)
 		fmt.Println("val:", strings.Join(v, ""))
 	}
-	fmt.Fprintf(w, "WEISHAODAREN") //这个写入到w的是输出到客户端的
+	fmt.Fprintf(w, "WEISHAODAREN ROUte") //这个写入到w的是输出到客户端的
 }
 
 func main() {
-	http.HandleFunc("/", sayHelloName)       //设置访问路由
-	err := http.ListenAndServe(":9090", nil) //设置监听的端口
+	mux := &MyMux{}
+	err := http.ListenAndServe(":9090", mux) //设置监听的端口
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
 	}
