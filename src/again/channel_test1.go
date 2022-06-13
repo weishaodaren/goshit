@@ -7,10 +7,10 @@ func sum(a []int, c chan int) {
 	for _, v := range a {
 		total += v
 	}
-	c <-total
+	c <- total
 }
 
-func main(){
+func main() {
 	a := []int{7, 2, 8, -9, 4, 0}
 
 	c := make(chan int)
@@ -20,4 +20,3 @@ func main(){
 
 	fmt.Println(x, y, x+y)
 }
-
