@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -29,7 +28,7 @@ func postFile(filename string, targetUrl string) error {
 		return err
 	}
 	defer fh.Close()
-	
+
 	//iocopy
 	_, err = io.Copy(fileWriter, fh)
 	if err != nil {
@@ -53,7 +52,7 @@ func postFile(filename string, targetUrl string) error {
 	return nil
 }
 
-func main() {
+func upload() {
 	target_url := "http://localhost:9090/upload"
 	filename := "./astaxie.pdf"
 	postFile(filename, target_url)
